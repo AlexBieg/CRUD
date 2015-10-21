@@ -1,21 +1,86 @@
+
+/*
+Bootstrap things
+*/
 .navbar {
 	background-color: rgba(200, 200, 200, .5);
 }
 
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/*
+My classes and Ids
+*/
 #header h3 {
 	font-weight: bold;
-	margin-left: 30px;
+	margin: 20px;
+	float: left;
+	transform: translateY(60%);
 }
 
 #product-img {
+	border: 1px solid lightgray;
 	border-radius: 5px;
+	display: inherit;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+#nav-user {
+	margin: 20px;
+	float: right;
+	text-align: center;
+}
+
+#avg-rating {
+	text-align: center;
+}
+
+#product-info p {
+	font-weight: bold;
+	background-color: rgb(200, 200, 200);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#helpful-positive {
+	background-color: rgba(2, 215, 237, .5);
+}
+
+#helpful-negative {
+	background-color: rgba(237, 163, 2, .5);
+}
+
+/*
+General Tags
+*/
+body {
+	font-size: 16px;
+}
+
+h2 {
+	text-align: center;
+}
+
+/*
+Media Queries
+*/
 @media only screen and (min-width: 768px) {
+	/*
+	My classes and Ids
+	*/
 	#product-img{
 		width: 700px;
+	}
+
+	/*
+	General Tags
+	*/
+	body {
+		font-size: 20px;
 	}
 }
