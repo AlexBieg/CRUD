@@ -11,22 +11,72 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+    <!-- Raty FA -->
+    <script type="text/javascript" src="js/jquery.raty-fa.js"></script>
+
+    <!-- Font Awsome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.css" rel="stylesheet">
+
+   	<!-- Include parse library here -->
+   	<script src="//www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+
     <!--Other Files-->
     <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+	<div id="myModal" class="modal fade" role="dialog">
+	  	<div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		       	<div class="modal-tabs">
+		       		<ul class="nav nav-tabs"id="tabContent">
+		       			<li class="active"><a href="#log-in-tab" data-toggle="tab">Log In</a></li>
+		       			<li><a href="#sign-up-tab" data-toggle="tab">Sign Up</a></li>
+		       		</ul>
+		       	</div>
+		       	<div class="modal-body">
+			       	<div class="tab-content">
+				    	<div id="log-in-tab" class="tab-pane active">
+				        	<form id="log-in">
+				        		<label for='li-username'>Username: </label>
+				        		<input type="text" id="li-username" class="form-control">
+				        		<br />
+				        		<label for="li-password">Password: </label>
+				        		<input id="pasword" type="li-password" class="form-control">
+				        		<button type="submit" class="btn btn-primary">Log In</button>
+				        	</form>
+				      	</div>
+				      	<div id="sign-up-tab" class="tab-pane">
+				        	<form id="sign-up">
+				        		<label for="su-email">Email: </label>
+				        		<input type="text" id="su-email" class="form-control">
+				        		<br />
+				        		<label for='su-username'>Username: </label>
+				        		<input type="text" id="su-username" class="form-control">
+				        		<br />
+				        		<label for="su-password">Password: </label>
+				        		<input id="su-password" type="password" class="form-control">
+				        		<button type="submit" class="btn btn-primary">Sign Up</button>
+				        	</form>
+				      	</div>
+				    </div>
+				</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      	</div>
+		    </div>
+	  	</div>
+	</div>
 	<div id="header" class="navbar navbar-fixed">
-	 <h3>Review-Me!</h3>
-	 <div id="nav-user">
-	 	<p>Hey, XXX</p>
-	 	<button class="btn btn-primary">Sign Out</button>
-	 </div>
+	<h3>Review-Me!</h3>
+	<div id="nav-user">
+	</div>
 	</div>
 	<div id="product-info" class="container">
 		<h1>Baby Mop</h1>
 		<img id="product-img" src="img/baby-mop.jpg">
-		<div id="avg-rating">Here is the avg rating</div>
+		<div id="avg-rating"></div>
 		<p>
 			Do you have a baby? Do you have to clean up after it? Well now, 
 			your baby can clean up after you. Baby Mop takes advantage of the
@@ -39,7 +89,7 @@
 	</div>
 	<div id="most-helpful" class="container">
 		<div class="row">
-			<h2>Most Helpful Comments</h2>
+			<h2>Most Helpful Reviews</h2>
 			<div id="helpful-positive" class="col-xs-12 col-md-6">
 				POSITIVE
 			</div>
@@ -47,6 +97,21 @@
 				NEGATIVE
 			</div>
 		</div>
+	</div>
+	<div id="write-area" class="container">
+		<div class="row">
+			<h2>Review-It!</h2>
+			<div id="new-rating">
+			</div>
+			<form id="new-review">
+				<input type="text" class="form-control" placeholder="Title Your Review" id="review-title"/>
+				<textarea class="form-control" placeholder="Why do you think that?"></textarea>
+				<button type="submit" class="btn btn-primary">Review-It!</button>
+			</form>
+		</div>
+	</div>
+	<div id="review-area" class="container">
+	
 	</div>
 </body>
 </html>

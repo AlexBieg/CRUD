@@ -3,7 +3,9 @@
 Bootstrap things
 */
 .navbar {
-	background-color: rgba(200, 200, 200, .5);
+	color: white;
+	background-color: rgb(50, 50, 50);
+	margin-bottom: 0px;
 }
 
 .row {
@@ -11,18 +13,34 @@ Bootstrap things
   margin-right: 0px;
 }
 
+.container {
+	background-color: white;
+}
+
 /*
-My classes and Ids
+Header
 */
 #header h3 {
 	font-weight: bold;
 	margin: 20px;
 	float: left;
-	transform: translateY(60%);
 }
 
+#nav-user {
+	margin: 20px;
+	clear: left;
+	float: left;
+	text-align: center;
+}
+
+#nav-user span {
+	margin-right: 5px;
+}
+
+/*
+Product Info
+*/
 #product-img {
-	border: 1px solid lightgray;
 	border-radius: 5px;
 	display: inherit;
 	width: 100%;
@@ -30,23 +48,20 @@ My classes and Ids
 	margin-right: auto;
 }
 
-#nav-user {
-	margin: 20px;
-	float: right;
-	text-align: center;
-}
-
-#avg-rating {
+#avg-rating, #write-area {
 	text-align: center;
 }
 
 #product-info p {
 	font-weight: bold;
-	background-color: rgb(200, 200, 200);
 	border-radius: 5px;
 	padding: 5px;
 }
 
+
+/*
+Helpful Reviews
+*/
 #helpful-positive {
 	background-color: rgba(2, 215, 237, .5);
 }
@@ -56,10 +71,35 @@ My classes and Ids
 }
 
 /*
+Write a review
+*/
+form input, form textarea, form button {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*
+Review Area and Reviews
+*/
+.review {
+	border-top:2px solid lightgray;
+	color: black;
+	background-color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/*
 General Tags
 */
 body {
+	background-color: lightgray;
 	font-size: 16px;
+}
+
+h1 {
+	font-weight: bold;
 }
 
 h2 {
@@ -69,6 +109,13 @@ h2 {
 /*
 Media Queries
 */
+@media only screen and (min-width: 565px) {
+	#nav-user {
+		float: right;
+		clear: none;
+	}
+}
+
 @media only screen and (min-width: 768px) {
 	/*
 	My classes and Ids
