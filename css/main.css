@@ -62,13 +62,12 @@ Product Info
 /*
 Helpful Reviews
 */
-#helpful-positive {
-	background-color: rgba(2, 215, 237, .5);
+#helpful {
+	background-color: rgba(2, 215, 237, .2);
+	text-align: center;
+	border-radius: 20px;
 }
 
-#helpful-negative {
-	background-color: rgba(237, 163, 2, .5);
-}
 
 /*
 Write a review
@@ -87,6 +86,19 @@ Review Area and Reviews
 	background-color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.thumb{
+	float: right;
+}
+
+.thumb:hover {
+	cursor: hand;
+	cursor: pointer;
+}
+
+.num-liked {
+	font-size: 12px;
 }
 
 
